@@ -22,7 +22,7 @@ function convertMs(ms) {
 }
 
 function addLeadingZero(value) { 
-    return value.toString().padStart(2, '0');
+  return value.toString().padStart(2, '0');
 }
 
 let selectedDate = new Date();
@@ -30,11 +30,11 @@ let currentDate = new Date();
 let countTimer = {};
 
 const referencia = {
-    button: document.querySelector('button[data-start]'),
-    days: document.querySelector('span[data-days]'),
-    hours: document.querySelector('span[data-hours]'),
-    minutes: document.querySelector('span[data-minutes]'),
-    seconds: document.querySelector('span[data-seconds]'),
+  button: document.querySelector('button[data-start]'),
+  days: document.querySelector('span[data-days]'),
+  hours: document.querySelector('span[data-hours]'),
+  minutes: document.querySelector('span[data-minutes]'),
+  seconds: document.querySelector('span[data-seconds]'),
 }
 
 referencia.button.setAttribute('disabled', true);
@@ -50,12 +50,12 @@ const options = {
     if (selectedDate > currentDate) {
       referencia.button.removeAttribute('disabled');
     } else {
-      Notiflix.Notify.warning('"Seleccione una fecha en el futuro');
+      Notiflix.Notify.warning('Seleccione una fecha en el futuro');
     }
   },
 };
 
-flatpickr('#datatime-picker', options);
+flatpickr('#datetime-picker', options);
 
 referencia.button.addEventListener('click', onBtnClick);
 
