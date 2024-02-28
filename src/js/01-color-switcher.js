@@ -10,7 +10,7 @@ const referencia = {
 // y tiempo.
 let tempoId = null;
 
-// Se añaden los "event listener" al hacer click en los botones.
+// Se añaden los "Event Listener" al hacer click en los botones.
 referencia.dataStart.addEventListener('click', onBtnStart);
 referencia.dataStop.addEventListener('click', onBtnStop);
 
